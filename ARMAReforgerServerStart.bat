@@ -143,7 +143,7 @@ CD /D %EXE_PATH%
 START "%S_NAME%" /MIN /D %EXE_PATH% %EXE% -config=%CONFIG% -a2sIpAddress=%AS2_IP% -a2sPort=%AS2_PORT% -bindIP=%BIND_IP% -bindPort=%BIND_PORT% -clent=%CLIENT_IP% -maxFPS=%MAX_FPS% %ADDITIONAL_PARAMETERS%
 ECHO MESSAGE: To stop the server, close %~nx0 then the other tasks, otherwise it will restart
 
-IF %RESTART_TIMEOUT%=0 (
+IF %RESTART_TIMEOUT% ==0 (
  GOTO RESTART_SKIP
 )
 TIMEOUT %RESTART_TIMEOUT%
